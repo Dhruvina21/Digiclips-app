@@ -6,7 +6,7 @@ import { SearchFormComponent } from "./components/team-member-3/search-form/sear
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavigationComponentm, SearchFormComponent],
+  imports: [RouterOutlet, NavigationComponent, SearchFormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
