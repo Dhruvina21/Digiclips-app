@@ -2,10 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-main-menu',
-  imports: [],
+  standalone: true,
   templateUrl: './main-menu.component.html',
-  styleUrl: './main-menu.component.css'
+  styleUrls: ['./main-menu.component.css'],
 })
-export class MainMenuComponent {
-
-}
+export class MainMenuComponent {}
