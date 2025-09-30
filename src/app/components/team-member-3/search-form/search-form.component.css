@@ -1,0 +1,32 @@
+h1 {
+    color:black;
+    text-align: left;
+}
+
+input[placeholder="Search..."] {
+    width: 75%;
+    padding: 12px;
+    margin: 10px, 0;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    background-color: white;
+    border: 1px solid rgb(187, 183, 183);
+    border-radius: 8px;
+    color: gray;
+}
+
+button[type="submit"] {
+    background-color: dodgerblue;
+    border: 1px solid blue;
+    color: white;
+    padding: 30px, 10px;
+    text-align: center;
+    display:inline;
+    font-size: 16px;
+    margin: 5px, 2px; 
+    margin-left: 10px;
+    margin-bottom: 10px;
+    width: 80px;
+    height: 30px;
+    cursor: pointer;
+}

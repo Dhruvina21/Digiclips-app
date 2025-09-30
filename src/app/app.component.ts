@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NavigationComponent } from './components/team-member-2/navigation/navigation.component';
+import { SearchFormComponent } from "./components/team-member-3/search-form/search-form.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavigationComponent],
+  imports: [RouterOutlet, NavigationComponentm, SearchFormComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
