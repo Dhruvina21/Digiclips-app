@@ -1,1 +1,43 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  /* Default (Light) Grayscale & Core Colors */
+  --color-primary-accent: oklch(51.01% 0.274 263.83); /* bright-blue */
+  --color-secondary-accent: oklch(
+    60.334% 0.20031 256.458
+  ); /* electric-violet */
+
+  --gray-900: oklch(19.37% 0.006 300.98); /* Near Black */
+  --gray-700: oklch(36.98% 0.014 302.71);
+  --gray-400: oklch(70.9% 0.015 304.04);
+
+  --background: #fff;
+  --text-color: var(--gray-900);
+}
+
+body.dark-theme {
+  /* Dark Mode Overrides */
+  --color-primary-accent: oklch(70% 0.274 263.83);
+  --color-secondary-accent: oklch(80% 0.20031 256.458);
+
+  --gray-900: oklch(90% 0.006 300.98); /* Near White */
+  --gray-700: oklch(75% 0.014 302.71);
+  --gray-400: oklch(40% 0.015 304.04);
+
+  --background: #121212;
+  --text-color: var(--gray-400);
+}
+
+/* Global Body Styling */
+body {
+  background-color: var(--background);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh; /* Ensure body takes full height for background color */
+}
+
+body.dark-theme .main,
+.pill-group a,
+.social-links a,
+body.dark-theme .digiclips_title,
+body.dark-theme .digiclips_slogan {
+  color: var(--text-color);
+}
