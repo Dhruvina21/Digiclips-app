@@ -15,8 +15,8 @@
 import { Injectable } from '@angular/core';   // provides decorator that marks a class as a service Angular can inject into other classes
 import { Observable, of} from 'rxjs'          // "rxjx" = Angular's reactive programming library; Obervable = a stream of data you can subscribe to; of() = an observable that emits a value immediately (good for mock data)
 
-// a TypeScript interface for the "MediaItem" data structure
-export interface MediaItem {
+export interface MediaItem      // a TypeScript interface for the "MediaItem" data structure
+{
   id: number;
   title: string;
   description: string;
@@ -24,12 +24,10 @@ export interface MediaItem {
   datePublished: string;
 }
 
-@Injectable({           //
-  providedIn: 'root'    //  These three lines mark this class as something Angular can inject elsewhere
-})                      //
+@Injectable({ providedIn: 'root' })     // marks this class as something Angular can inject elsewhere
 
-export class MediaDataService {       // the service class definition
-
+export class MediaDataService     // the service class definition
+{       
   private mockMediaData: MediaItem[] = [    // a static array of sample media
     {
       id: 1,
@@ -54,12 +52,14 @@ export class MediaDataService {       // the service class definition
     }
   ];
 
-  constructor() {
+  constructor()
+  {
     console.log('[MediaDataService] Initialized Successfully.');    // debug log: checks successful initialization; only runs once when the service is first created
   }
 
-  getMockMedia(): Observable<MediaItem[]> {     // a public method that returns an observable
-    console.log('[MediaDataService] Fetching Mock Media Data...');    // logs to console
+  getMockMedia(): Observable<MediaItem[]>     // a public method that returns an observable
+  {
+    console.log('[MediaDataService] Fetching Data...');    // logs to console
     return of(this.mockMediaData);      // wraps the static array in an Observable; real HTTP calls also returns Observables, so component code won't need to change.
   }
 }
