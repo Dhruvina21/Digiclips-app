@@ -1,6 +1,6 @@
 <h2>Media List </h2>
 <ul>
-    <li *ngFor="let item of mediaItems">
+    <li *ngFor="let item of mediaItems"> <!-- *ngFor is a structural directive that tells Angular to repeat a block of HTML for each element in a list -->
         <strong>{{ item.title }}</strong> ({{ item.mediaType }})
         <p>{{ item.description }}</p>
         <small>Published: {{ item.datePublished }}</small>
